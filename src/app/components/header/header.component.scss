@@ -1,0 +1,32 @@
+@import '../../../styles/mixins';
+
+.header {
+  background-color: #424242;
+  height: 2.5rem;
+  z-index: 1;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @include for-phone-only {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  h5,
+  fa-icon {
+    color: #ffffff;
+  }
+
+  a {
+    border: 0;
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover,
+    &.is-active {
+      background-color: #161623;
+    }
+  }
+}

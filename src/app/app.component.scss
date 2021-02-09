@@ -1,0 +1,15 @@
+@import '../styles/mixins';
+
+.router-container {
+  overflow-x: hidden;
+}
+
+.app-container {
+  background-image: url('../assets/cine-large.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  @include for-phone-only {
+    background-image: url('../assets/cine-small.jpg');
+  }
+}

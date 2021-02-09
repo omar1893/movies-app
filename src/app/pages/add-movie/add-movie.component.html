@@ -1,0 +1,15 @@
+<section class="d-flex align-items-center add-movie-container">
+    <div class="card-glass add-movie d-flex flex-column p-4">
+        <form [formGroup]="addMovieForm">
+            <div class="add-movie-content mb-3">
+                <input type="text" [ngClass]="{'invalid': invalidForm.title}" formControlName="title" name="title" placeholder="Title" />
+                <input type="date" [ngClass]="{'invalid': invalidForm.release}" formControlName="release" name="release" placeholder="Release" />
+                <input type="text" [ngClass]="{'invalid': invalidForm.image}" [value]="imageName" name="image-input" placeholder="Image" readonly="readonly" (click)="file.click()">
+                <input type="file" class="d-none" accept="image/png, image/jpeg" #file name="title" placeholder="Image" (change)="onImageSelection($event)"/>
+            </div>
+            <textarea placeholder="Description" class="w-100" name="description" formControlName="description" id="" cols="30" rows="10">
+            </textarea>
+            <button class="d-block mx-auto" type="button" (click)="createMovie()">Create Movie</button>
+        </form>
+    </div>
+</section>

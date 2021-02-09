@@ -1,0 +1,6 @@
+<div class="movies-list-container">
+    <div class="movies-list p-2" *ngIf="movies?.length > 0" [ngClass]="{'top': top, 'grid': !top}">
+        <app-movie-item *ngFor="let movie of movies; index as i" [movie]="movie" [top]="top" [index]="i">
+        </app-movie-item>
+    </div>
+</div>

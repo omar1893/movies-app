@@ -1,0 +1,8 @@
+<div class="card-glass movie-item mx-auto py-2" [ngClass]="{'mb-2': top}" (click)="openModal()">
+    <div class="content w-100">
+        <h2 *ngIf="top">{{index+1}}º</h2>
+        <h3>{{movie?.title}}</h3>
+        <p>{{movie?.release | date:'longDate'}}</p>
+        <button type="button" *ngIf="!top" (click)="deleteMovie(index, $event)"><fa-icon [icon]="faTrash"></fa-icon></button>
+    </div>
+</div>

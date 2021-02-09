@@ -1,0 +1,11 @@
+<header class="d-flex header">
+    <div class="d-flex align-items-center">
+        <fa-icon [icon]="film" class="mr-1"></fa-icon>
+        <h5 class="m-0">Movie App</h5>
+    </div>
+    <div class="d-flex align-items-center">
+        <a class="p-2" routerLink="/home" [routerLinkActive]="['is-active']">Home</a>
+        <a class=" p-2" routerLink="/add-movie" [routerLinkActive]="['is-active']">Add Movie</a>
+        <a class=" p-2" routerLink="/top-movies" [routerLinkActive]="['is-active']">Top 5 Movies</a>
+    </div>
+</header>

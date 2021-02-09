@@ -1,0 +1,28 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.movies-list-container {
+  width: 100%;
+  height: $height-container;
+  overflow-y: scroll;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px 50px;
+
+  @include for-phone-only {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.top {
+  display: flex;
+  flex-flow: column;
+
+  .card-glass:not(:first-child) {
+    margin-top: 10px;
+  }
+}

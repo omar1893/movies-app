@@ -1,0 +1,9 @@
+<div class="drawer card-glass" [ngClass]="{'open': open}">
+    <p class="drawer-close" (click)="closeDrawer()">X</p>
+    <div class="drawer-content px-3">
+        <h2>{{movie?.title}}</h2>
+        <img [src]="movie?.image" alt="" class="img-fluid">
+        <p>{{movie?.release | date:'longDate'}}</p>
+        <p>{{movie?.description}}</p>
+    </div>
+</div>
