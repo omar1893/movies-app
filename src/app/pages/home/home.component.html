@@ -1,1 +1,4 @@
-<app-movies-list [movies]="movies"></app-movies-list>
+<app-movies-list *ngIf="movies?.length > 0" [movies]="movies"></app-movies-list>
+
+<app-movies-list *ngIf="movies?.length === 0" [movies]="placeholderMovie" [placeholder]="true"></app-movies-list>
+

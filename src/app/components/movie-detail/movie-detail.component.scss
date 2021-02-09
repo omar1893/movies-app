@@ -20,6 +20,10 @@
         color: #ffffff;
     }
 
+    img {
+        max-width: 80%;
+    }
+
     .drawer-close {
         position: absolute;
         top: 5%;
@@ -28,13 +32,3 @@
         cursor: pointer;
     }
 }
-
-/* @keyframes scrollDrawer {
-    0% {
-        left: 100%;
-    }
-
-    100% {
-        left: 0%
-    }
-} */

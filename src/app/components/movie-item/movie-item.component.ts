@@ -16,6 +16,7 @@ export class MovieItemComponent implements OnInit {
   @Input() movie: Movie;
   @Input() top = false;
   @Input() index = 0;
+  @Input() placeholder = false;
 
   constructor(
     private readonly listenerService: ListenerService,

@@ -35,7 +35,6 @@ export class AddMovieComponent implements OnInit {
   }
 
   public createMovie(): void {
-    console.log(this.addMovieForm.value)
     if (this.addMovieForm.valid) {
       this.store.dispatch(add({ ...this.addMovieForm.value, image: `data:image/jpeg;base64,${this.base64textString}` }))
       this.router.navigate(['home'])
@@ -46,7 +45,6 @@ export class AddMovieComponent implements OnInit {
           this.invalidForm[name] = true;
         }
       }
-      console.log(this.invalidForm);
 
     }
   }
@@ -69,10 +67,8 @@ export class AddMovieComponent implements OnInit {
   _handleReaderLoaded(readerEvt) {
     var binaryString = readerEvt.target.result;
     this.base64textString = btoa(binaryString);
-    console.log(this.base64textString);
 
     this.addMovieForm.controls.image.setValue(this.base64textString)
-    console.log(btoa(binaryString));
   }
 
 }
